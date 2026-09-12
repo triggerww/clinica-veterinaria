@@ -2,7 +2,7 @@
 Este documento detalha os requisitos do site a ser desenvolvido.
 
 ## Backlog do Produto
-* O cliente não quer login, qualquer pessoa pode cadastrar os tutores e seus pets.
+* O cliente não quer login, já que apenas o veterinário vai cadastrar os tutores e seus pets.
 * O veterinário cadastra os tutores, edita e apaga.
 * O formulário tem que ter informações como data, nome do veterinário algumas outra coisinhas.
 * O receituário e preenchido(formulário) junto com as informações como espécie, raça, cor.
