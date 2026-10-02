@@ -10,20 +10,26 @@ Prototipo no Figma: [Aqui](https://www.figma.com/design/0kAb3nbGc9SY4zAAa7lrjq/C
 ```Mermaid
 flowchart TD
     cliente["Cliente"]
-    veterinario["Veterinário"]
+    recepcionista["Recepcionista "]
+    vet["Veterinário"]
 
     %% Ações
     subgraph Sistema
-        cadastro-pet["Cadastra pet"]
-        cadastro-tutor["Cadastra o tutor"]
-        agenda["Agenda a consulta"]
+        pet["Cadastra pet"]
+        tutor["Cadastra o tutor"]
+        consulta["Agenda a consulta"]
+        examina["Examina pet"]
+        diagnostico["Da diagnóstico"]
+        cobra["Cobra o valor da consulta $$"]
     end
 
     %% Relacionamentos
-    cliente -- "Leva pet" --> veterinario
-    veterinario --> cadastro-tutor --> cadastro-pet
+    cliente -- "Leva pet na veterinaria" --> recepcionista --> tutor --> pet
+    recepcionista --> consulta
+
+    cliente -- "Entrega pet" --> vet --> examina --> diagnostico
 ```
 
-[![](https://mermaid.ink/img/pako:eNptUsFugkAQ_ZXNJN7UIOKCHJoYPbaXtumhpYcpjEICu2ZZrK3xY3rqF_QL_LEOIA2actjMe_Nm5jG7B4h1QhDCOtfvcYrGisdVZCIl-IvzjJSllwiWbRTBa5fbkSWTKTSZ5vxTi05fDM-iTjgYiMXp-_RDZceU1dvG4DYVD1lpqcCOb0ZigqU1erQlW89tIQqGveEXSltZbfpaLRrqSo8bUgmybtEEAkWsVVnlFntCzlx5v6cc40wrLHgBurxajRiNRAS3tDs7ZHzTX80_22okl-YvqbrR2QMMYWOyBEJrKhpCQabAGsKhbhuBTangSwk5NJRU-1Gs8_rHI3Xk0i2qZ62LrtroapNCuMa8ZFRtE7S0ypCvovhjDS-AzFJXykI4CQI5BEoytnjXvpLmsTSdITzAHsLp1Bm7Uz5lEHi-nHHBB4SBN_Ynci49351Ify7nxyF8Nlacse-4chbMZhN_7knHc4-_e-zRaQ?type=png)](https://mermaid.live/edit#pako:eNptUsFOg0AQ_ZXNJN6gKRQWysGkaY96UeNB8TDCFIiwS5alVpt-jCe_wC_oj7lAMW0jBzLvzWPm8XZ3kMiUIIJ1Kd-THJVmD6tYxYKZJykLEpqeY1gOVQwvY29DmlQhUBXS9B8HdPgy8CgahVdXbHH4PvxQMzJN-5oprHN2XzSaKhz5fiWm2Ggl7Zp0t3eAyAw8WX6m1K2W6lQrWU9d6DEjkaLRLfqCIUukaNpS44nQdC6831GJSSEFViYA2VxEw2ybxXBDm6NDg69Po_knrV5ybv6c6gYdPYAFmSpSiLRqyYKKVIUdhF03NgadU2UOJTKlorTd2imqNzuRZff3sdib72sUT1JW4wgl2yyHaI1lY1Bbp6hpVaA5j-qPVSYFUkvZCg2RE4auBZQWxuftcFX6G9NPhmgHW4hms-nEnZk3D0Mv4D634AOi0JsEDp9zL3AdHsz5fG_BZ29lOgmmLvdD33eCucennrv_BdLC0zQ)
+[![](https://mermaid.ink/img/pako:eNptU0tu2zAQvQpBJDvZsD6WZC0CBHZ27SYtumjVxUSayAQkUqAo163hw3TVAxQ9gS-WIWW5ihNuOPPmzUdvxAMvVIk848-1-lFsQRv2eZPrXDI6RS1QGvyW8_Vg5fz7GNNYYFsIJUVngBiPU59NiDs0FP6CBrWQp99aqHNwJNzesvvTn9M_7Eak658qDe2WfaJi2MCI29O6cmsooTMarDvpZY_pjdJTihqgK1qhZNfXbvT7CmUJDC7YFRX30AhpmQ-D9U7XUkAlVWdEoYi3gQE4_XXIm9ZP2lZb25vG20GtNCv_92c3N5MUGu5KrkeswUoNDS1FdVfrYrMZ6f8Bd25ORuPuBvFBC_o0Ct-93p5DnEbOsh_33pJd8CLRZKJXfR-k0VidJXIp1N3dZxmdPZFrWol7vNKi5JnRPXq8Qd2AdfnBxnNuttjQT5iRqbHs97NC1XazuTxSagvyq1LNmK1VX2159gx1R17flmBwQ301NBdUk7io16qXhmeRH6Qex1KQEh-HV-Eeh6vMswPf8yxYzMMgDcMoXaRhtIp9j__kWZzMo2XkR0kYpmmc-Kujx3-5URbzJPCDOA5XyzhM4lW6PL4AQjYd2Q?type=png)](https://mermaid.live/edit#pako:eNptU0tu2zAQvQoxSHayEcX6xFoUCOzs2k1adNGqi4k0kQlIpDCiXLeGD9NVD1D0BL5YSMpyFTfccObNm4_eiHsodEmQwXOtvxcbZCM-rXPOlbCnqCUpQ19zWA1WDt_GGFNBbSG1kp1By3ic-mJC3JKx4c9kiKU6_mKpT8GRcH0t7o-_j3-pG5Guf6oY2434aItRgyPuTuvLrbDEzjA6d9LLHdMbzVOKHqALWqFV19d-9PuKVIkCz9gFlXbYSOWYD4P1RtdSYqV0Z2ShLW-NA3D845H_Wj-xq7Zytx1vi7VmUf7rL66uJil2uAu5HqlGJzU2dim6u1iXmM2s_u9p6-cUdtztID6ytJ9mw-9eb88jXiNvuY97a8k-eJZoMtGrvg_KMFUniXyK7e7vk4zensg1rQQBVCxLyAz3FEBD3KBzYe_iOZgNNfYnzKzJVPa7WaFrt9lcHWxqi-qL1s2YzbqvNpA9Y91Zr29LNLS2fRmbM8pWXOKV7pWBLApvogColFaJD8Or8I_DV4ZsDzvIZmE8T9IwSZfRMkmTOFykAfyALI7nURyFaXoXJ1EUL8JDAD_9MDfz9Da8TZLFMk4WabK8iw8ve08eQQ)
 
 
