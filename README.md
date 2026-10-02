@@ -44,7 +44,7 @@ classDiagram
         -nome: string
         -data: string
         -contato: string
-        -animais: Lista de Pet
+        -animais: Pet
         +getCPF(): string
         +getNome(): string
         +getData(): string
@@ -70,7 +70,6 @@ classDiagram
         -nome: string
         +getCPF(): string
         +getNome(): string
-        +atenderPet(Pet: Pet) void 
     }
 
     class Exame {
@@ -86,4 +85,4 @@ classDiagram
     Veterinario -- Exame
 ```
 
-[![](https://mermaid.ink/img/pako:eNqlVFFr2zAQ_ivinlrqBDuOHUevzQaFbpQx-jD8ckQXVxBLQZZLtpDfsx-yP7aT16xx4pZ2MwhL9-nuvvtO0g6WVhFIWK6xaRYaK4d16Uoj-Ots4mvrrRO7gzF8o-u7j1I03mlT9ezG1jQIKPQ4CCyt8ejtIIZG16gbKW5141EoEnfkj3dcVeSZysXlkHsAPzOfl9EFkzpH92HSl4DTngiglRTa-H6N1nAdnVw9u8NfP_F9cmmFis4yBM43KjAeABacPUBn-QP4JVD4V5luApmTrD2R_pyQ0ejQnr549-SJw6LT9kTE5Wb1Lln-p93oyShyzPCChwxUL8Wj1Uq80vcPW6zpDZ2nsG-wlEdcWyfFam3x7a3s0r5c5X2IGeBe1B79Y82f-zKAdKkOnscDIqicViC9aymCmhxfRV7CLsQpwT8QO4LkqSPVbvkiM6sSSrNn1w2ab9bWB29n2-oB5ArXDa_aDb8G9PTW_N3StefatsaDnKX5PAJSms_Vp6f3Kfy6wCB3sAU5SeNxUmRJFifTfFpM0yKC72yejvM0jeMkncwyRrJ9BD86KvG4mOdxPsvmSZbNikmc7n8DR6qA2A?type=png)](https://mermaid.live/edit#pako:eNqlVNtu2zAM_RWBTy3mBE7lS6bXZgMKbEMxDH0o_EJEjCsglgJZLrIF-Z59yH5slNdsceIO7WZAsMQjkoeHknawdJpAwXKNbbswWHtsKl9ZwV9vE1-64LzYHYzxm1zfvleiDd7YemC3rqFRQGPAUWDpbMDgRjG0pkHTKvHBtAGFJnFL4XjHm5oCU7m4HHOP4Cfm8zy6YFLn6D5OhhJw2hMBjFbC2DCs0Vmuo5drYPf44zu-Ti6jUdNZhsj5RkfGI8CCs0foLH8EP0cK_yrTTSRzknUg0q8TMpkc2jMU744CcVj0xp2IuNysXiXL_7QbA1lNnhle8FCR6qV4dEaLv_T93RYbekHnKe4bLeUR184rsVo7fHkr-7TPV3kXY0Z4EHVA_1jzP30ZQfpUB8_jAQnU3mhQwXeUQEOeryIvYRfjVBAeiB1B8dST7rZ8kZlVBZXds-sG7b1zzcHbu65-ALXCdcurbsOvAT29Nb-tvu_PtetsAFXKIkuAtOGD9fHpgYq_PjKoHWxBXcl0OpvnszydZUU2z-Q8ga9szqaFlGk6k1dlzki-T-BbzyWdzt8WaVEWWS5zWUpZ7n8CyfKBHw)
+[![](https://mermaid.ink/img/pako:eNqdVN1KwzAUfpVyrhS70ena1dw6BS8UEfFCenNYzmqgTUaaynTseXwQX8yTanXdKmwGSpPznZ8v30mygpmRBAJmBVbVVGFuscxspgMejS14qJ2xwao1-jG4uLsSQeWs0nnHrk1JvYBEh73AzGiHzvRiqFWJqhLBHblN4CQnxwyOjvuiPHjLNP5Gp8xlF137SXfnXHZr30qKQGnX3ZrRTL9RqWO3-PGOh6mkJEraqeA5X0vPuAeYcnUP7dT34L2n8F-Zrj2Zraodkb4OxmDQtqcr3iM54rRoldkScbaYHyTLP9vd09DLJZa0R0vJ-_VyfMHCWBHMC4P796gp-zf9R5_Tw52sHfqbYv4K3oM0pdrIzQ9CyK2SIJytKYSSLF8tXsLK58nAPRMHguCpJVkv-WIyqwwyvebQBeonY8o22po6fwYxx6LiVb3g203fb8ePC2lJ9sLU2oGYxNEoBJKKD8zN93vjf01iECtYghjFoyG7JcnZaZRG0SQN4RXE6XiYxlGcjM_jJEniaLwO4a1hEg3TSbz-BEBTbzg?type=png)](https://mermaid.live/edit#pako:eNqdVFFPwjAQ_ivLPWkchAljrK-iCQ8aYgwPZi8XeswmrCVdZ1DC7_GH-Me8TlEGI1GbLGvv6919_a7XDcyNJBAwX2JZjhXmFovMZjrgUduCh8oZG2x2Rj86V9MbEZTOKp037NoU1ApIdNgKzI126EwrhloVqEoRTMntAxc5OWZwdt7m5cE7pnEaHTOXY3TrJ82Tc9qDcyspAqVd82hGM_1apYbd4vsb_k0lJVHSUQbPeSI94xZgzNk9dJTfg_eewn9lmngyB1kbIn1ejE5nV56meDNyxGHRKnMg4ny1-JMs_yx3S0Gv11jQL0pKfl8rx2dcGiuCxdLg72tUpz1Nf-ZjergRtUF_X8wfwVuQOtXOc_-DEHKrJAhnKwqhIMutxUvY-DgZuCdiRxA8tSSrNTcms8og01t2XaF-NKbYeVtT5U8gFrgseVWtuLvp6-343kJakr0ylXYgkkHaC4Gk4gtz-_Xe-F8dGMQG1iCiftqNe9Ew7SeXcTyK00EILyAu4-4o7sXDKBpE6TBJkv42hNeaS687SuLtByMjb74)
