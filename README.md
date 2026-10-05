@@ -21,17 +21,14 @@ flowchart TD
         examina["Examina pet"]
         diagnostico["Da diagnóstico"]
         opera["Faz Operação"]
-        cobra["Cobra o valor da consulta $$"]
-        paga["Paga valor da consulta $$"]
     end
 
     %% Relacionamentos
     cliente -- "Leva pet na veterinaria" --> recepcionista --> tutor --> pet
     recepcionista --> consulta
 
-    cliente -- "Entrega pet" --> vet --> examina --> diagnostico
-    opera -. "Se precisar" .-> diagnostico --> cobra
-    cliente --> paga
+    cliente -- "Entrega pet" --> vet --> examina --> diagnostico 
+    diagnostico -. "Se precisar" .-> opera 
 ```
 
 ### Diagrama de classes
@@ -73,10 +70,8 @@ classDiagram
     class Exame {
         -id: int
         -exame: string
-        -valor: float
         +getId(): int
         +getExame(): string
-        +getValor(): float
     }
 
     Veterinario -- Pet
