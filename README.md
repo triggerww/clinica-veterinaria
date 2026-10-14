@@ -76,7 +76,7 @@ classDiagram
         +getIdade(): int
     }
 
-    class Exame {
+    class Receituário {
         -id: int
         -descricao: String
         +getId(): int
@@ -84,6 +84,6 @@ classDiagram
     }
 
     Tutor --> Pet
-    Pet --> Exame
-    Veterinario --> Exame
+    Pet --> Receituário
+    Veterinario --> Receituário
 ```
