@@ -9,26 +9,28 @@ Prototipo no Figma: [Aqui](https://www.figma.com/design/0kAb3nbGc9SY4zAAa7lrjq/C
 ### Diagrama de caso de uso:
 ```mermaid
 flowchart TD
-    cliente["Tutor"]
+    tutor["Tutor"]
     recepcionista["Recepcionista "]
     vet["Veterinário"]
 
     %% Ações
     subgraph Sistema
         pet["Cadastra pet"]
-        tutor["Cadastra o tutor"]
+        cadtutor["Cadastra o tutor"]
         consulta["Agenda a consulta"]
         examina["Examina pet"]
         diagnostico["Da diagnóstico"]
         opera["Faz Operação"]
+        receituario["Preenche receituário"]
     end
 
     %% Relacionamentos
-    cliente -- "Leva pet na veterinaria" --> recepcionista --> tutor --> pet
+    tutor -- "Leva pet na veterinaria" --> recepcionista --> cadtutor --> pet
     recepcionista --> consulta
 
-    cliente -- "Entrega pet" --> vet --> examina --> diagnostico 
-    diagnostico -. "Se precisar" .-> opera 
+    tutor -- "Entrega pet" --> vet --> examina --> diagnostico --> receituario
+    diagnostico -. "Se precisar" .-> opera  --> receituario 
+    vet -- "Devolve pet depois de todo procedimento" --> tutor
 ```
 
 ### Diagrama de classes
