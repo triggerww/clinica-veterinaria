@@ -36,46 +36,54 @@ flowchart TD
 ### Diagrama de classes
 ```mermaid
 classDiagram
+    Pessoa <|-- Tutor
+    Pessoa <|-- Veterinario
+    Pessoa <|-- Recepcionista
+
+    class Pessoa {
+        -cpf: String
+        -nome: String
+        -dataNascimento: String
+        +getCpf(): String
+        +getNome(): String
+        +getDataNascimento(): String
+    }
+
     class Tutor {
-        -CPF: string
-        -nome: string
-        -data: string
-        -contato: string
-        -animais: Pet
-        +getCPF(): string
-        +getNome(): string
-        +getData(): string
+        -contato: String
+        +getAnimais(): Pet[]
+    }
+
+    class Veterinario {
+        -idVet: String
+        +getIdVet(): String
+    }
+
+    class Recepcionista {
+        -idRec: String
+        +getIdRec(): String
     }
 
     class Pet {
         -id: int
-        -dono: Tutor
-        -raça: string
-        -nome: string
+        -nome: String
+        -raca: String
         -idade: int
         +getId(): int
         +getDono(): Tutor
-        +getRaça(): string
-        +getNome(): string
+        +getRaca(): String
+        +getNome(): String
         +getIdade(): int
-    }
-
-    Tutor -- Pet
-
-    class Veterinario {
-        -cpf: string
-        -nome: string
-        +getCPF(): string
-        +getNome(): string
     }
 
     class Exame {
         -id: int
-        -exame: string
+        -descricao: String
         +getId(): int
-        +getExame(): string
+        +getDescricao(): String
     }
 
-    Veterinario -- Pet
-    Veterinario -- Exame
+    Tutor --> Pet
+    Pet --> Exame
+    Veterinario --> Exame
 ```
